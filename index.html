@@ -1,52 +1,52 @@
-<!doctype html>
+<!doctype>
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171714">
-  <meta name="description" content="KELOMPOK 6 — curated pieces for a considered lifestyle.">
-  <title>KELOMPOK 6 — Curated for your lifestyle</title>
-  <link rel="icon" href="assets/images/placeholder.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>KELOMPOK 6 — Collection</title>
   <link rel="stylesheet" href="assets/css/storefront.css">
   <script src="assets/js/storefront.js" defer></script>
 </head>
 <body>
-  <div class="announcement">COMPLIMENTARY DELIVERY ON ORDERS OVER RP 1.500.000</div>
-  <header class="header" id="top">
-    <button class="icon-button menu-button" id="menu-open" aria-label="Open menu"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
-    <a class="brand" href="#top" aria-label="Kelompok 6 home">KELOMPOK <span>6</span><small>CURATED FOR YOUR LIFESTYLE.</small></a>
-    <nav class="desktop-nav"><a href="#collection">SHOP</a><a href="#story">OUR STORY</a><a href="#footer">CONTACT</a></nav>
-    <div class="header-tools"><button class="icon-button search-open" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="bag-button" id="bag-open">BAG <span id="bag-count">0</span></button></div>
+  <header class="header">
+    <button class="menu-button" id="menu-open" aria-label="Menu"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    <a class="brand" href="index.html" aria-label="Kelompok 6">C <span>H</span> M B</a>
+    <div class="header-tools">
+      <button class="icon-button search-open" aria-label="Cari"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button>
+      <button class="account-button" id="manage-open" aria-label="Kelola produk"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c.8-5 3.5-7 8-7s7.2 2 8 7"/></svg></button>
+      <button class="bag-button" id="bag-open" aria-label="Keranjang"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span id="bag-count">0</span></button>
+    </div>
   </header>
+
   <main>
-    <section class="hero">
-      <img class="hero-image" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2200&q=88" alt="Editorial lifestyle collection" fetchpriority="high">
-      <div class="hero-shade"></div><div class="hero-content"><span class="eyebrow">A CONSIDERED COLLECTION</span><h1>The art of<br><em>everyday living.</em></h1><p>Thoughtful pieces, chosen to make the everyday feel exceptional.</p><a class="button button-ivory" href="#collection">EXPLORE THE COLLECTION <span>↗</span></a></div>
-      <span class="hero-index">01 — 03</span>
+    <section class="collection-heading">
+      <button class="back-button" onclick="history.length>1?history.back():scrollTo(0,0)" aria-label="Kembali"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button>
+      <h1>Collection</h1>
+      <button class="filter-button" id="mobile-filter" aria-label="Filter"><svg viewBox="0 0 24 24"><path d="M4 7h16M7 12h10M10 17h4"/></svg></button>
     </section>
-    <section class="intro-strip"><span>OBJECTS WITH INTENTION</span><i></i><span>DESIGNED TO ENDURE</span><i></i><span>MADE FOR YOUR EVERYDAY</span></section>
-    <section class="collection section" id="collection">
-      <div class="section-top"><div><span class="eyebrow">THE EDIT</span><h2>Find your <em>new favourite.</em></h2></div><p>Pieces selected with care.<br>Kept for a long time.</p></div>
-      <div class="catalog-tools"><div class="filters" id="category-filters" aria-label="Product categories"></div><label class="sort-control">SORT BY <select id="sort-select"><option value="featured">Featured</option><option value="newest">Newest</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="az">Name: A–Z</option></select></label></div>
-      <div class="product-grid" id="product-grid" aria-live="polite"></div>
-      <p class="empty-products" id="empty-products" hidden>No pieces found. Try another search or category.</p>
-      <div class="collection-foot"><span id="product-count"></span><button class="text-button" id="manage-open">MANAGE COLLECTION <span>↗</span></button></div>
+
+    <section class="shop-toolbar">
+      <div class="filters" id="category-filters"></div>
+      <label class="sort-control">URUTKAN <select id="sort-select"><option value="featured">Unggulan</option><option value="newest">Terbaru</option><option value="low">Harga: rendah ke tinggi</option><option value="high">Harga: tinggi ke rendah</option><option value="az">Nama: A–Z</option></select></label>
     </section>
-    <section class="campaign"><div class="campaign-image"><img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=1500&q=85" alt="A calm, considered interior" loading="lazy"></div><div class="campaign-copy"><span class="eyebrow">THE SLOW LIVING EDIT</span><h2>Make room<br>for <em>meaning.</em></h2><p>Every piece in our collection is chosen to bring ease, character and quiet beauty to the rituals of daily life.</p><a class="text-link" href="#collection">SHOP THE EDIT <span>↗</span></a></div></section>
-    <section class="story section" id="story"><span class="eyebrow">A NOTE FROM US</span><h2>Good things<br>are <em>considered.</em></h2><p>KELOMPOK 6 is an independent edit of objects and essentials for modern living. We believe the things we choose to live with should feel personal, purposeful and made to last.</p><a class="text-link" href="#footer">GET TO KNOW US <span>↗</span></a><span class="story-mark">K6</span></section>
-    <section class="newsletter"><div><span class="eyebrow">A LETTER, OCCASIONALLY</span><h2>Stay in the know.</h2><p>New arrivals, considered notes and little things worth knowing.</p></div><form id="newsletter-form"><label class="sr-only" for="newsletter-email">Email address</label><input id="newsletter-email" type="email" placeholder="Your email address" required><button aria-label="Subscribe">JOIN <span>↗</span></button><small id="newsletter-note">By subscribing, you agree to receive occasional updates.</small></form></section>
+
+    <section class="catalog"><div class="product-grid" id="product-grid"></div><p class="empty-products" id="empty-products" hidden>Produk tidak ditemukan.</p></section>
   </main>
-  <footer class="footer" id="footer"><div class="footer-main"><div class="footer-brand"><a class="brand brand-inverse" href="#top">KELOMPOK <span>6</span><small>CURATED FOR YOUR LIFESTYLE.</small></a><p>Thoughtfully selected pieces<br>for a life well lived.</p></div><div><span class="footer-label">EXPLORE</span><a href="#collection">Shop all</a><a href="#story">Our story</a><a href="mailto:hello@kelompok6.com">Get in touch</a></div><div><span class="footer-label">FOLLOW ALONG</span><a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://tiktok.com/" target="_blank" rel="noreferrer">TikTok ↗</a></div><div class="footer-note">A LITTLE LESS, A LITTLE BETTER.<br><span>© <span id="year"></span> KELOMPOK 6</span></div></div><div class="footer-bottom"><span>JAKARTA · INDONESIA</span><span>MADE WITH INTENTION.</span></div></footer>
+
   <div class="overlay" id="overlay"></div>
-  <aside class="bag-drawer" id="bag-drawer" aria-label="Shopping bag" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow">YOUR SELECTION</span><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button class="icon-button close-overlay" aria-label="Close bag">×</button></div><div class="bag-items" id="bag-items"></div><div class="bag-bottom"><div class="subtotal"><span>SUBTOTAL</span><strong id="bag-subtotal">Rp 0</strong></div><p>Shipping and any applicable taxes are calculated at checkout.</p><button class="button button-dark" id="checkout-button">CHECK OUT VIA WHATSAPP <span>↗</span></button><button class="text-button continue-shopping">CONTINUE SHOPPING</button></div></aside>
-  <dialog class="product-dialog" id="product-dialog"><button class="dialog-close" data-close aria-label="Close">×</button><div id="product-dialog-content"></div></dialog>
-  <dialog class="manage-dialog" id="manage-dialog"><button class="dialog-close" data-close aria-label="Close">×</button><div class="manage-heading"><span class="eyebrow">LOCAL CATALOG EDITOR</span><h2>Manage your <em>collection.</em></h2><p>Changes are saved in this browser only. Export the catalog JSON to publish your edits for everyone.</p></div><div class="manage-actions"><button class="button button-dark" id="add-product">ADD A PRODUCT +</button><button class="button button-outline" id="export-catalog">EXPORT CATALOG JSON ↓</button><label class="button button-outline import-label">IMPORT CATALOG JSON ↑<input id="import-catalog" type="file" accept="application/json,.json" hidden></label><button class="text-button" id="reset-catalog">RESET TO STARTER CATALOG</button></div><div class="manage-list" id="manage-list"></div></dialog>
-  <dialog class="edit-dialog" id="edit-dialog"><button class="dialog-close" data-close aria-label="Close">×</button><span class="eyebrow">PRODUCT DETAILS</span><h2 id="edit-title">Add a piece</h2><form id="product-form" class="product-form"><input type="hidden" id="product-id"><label>Product name<input id="field-name" required maxlength="90"></label><label>Category<input id="field-category" required maxlength="40" placeholder="Objects"></label><label>Price (IDR)<input id="field-price" type="number" min="0" step="1000" required></label><label>Compare-at price (optional)<input id="field-compare" type="number" min="0" step="1000"></label><label>Image URL<input id="field-image" type="url" required placeholder="https://..."></label><label>Short description<textarea id="field-description" rows="3" maxlength="240"></textarea></label><label class="checkbox-label"><input id="field-featured" type="checkbox"> Feature on homepage</label><div class="form-buttons"><button type="button" class="button button-outline" data-close>Cancel</button><button class="button button-dark">SAVE PRODUCT</button></div></form></dialog>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <div class="search-panel" id="search-panel"><button class="icon-button close-search" aria-label="Close search">×</button><label for="search-input" class="eyebrow">WHAT ARE YOU LOOKING FOR?</label><div class="search-line"><input id="search-input" type="search" placeholder="Search the collection"><span>↵</span></div></div>
-  <div class="mobile-menu" id="mobile-menu"><button class="icon-button close-menu" aria-label="Close menu">×</button><a href="#collection">SHOP THE COLLECTION</a><a href="#story">OUR STORY</a><a href="#footer">CONTACT</a></div>
+  <aside class="bag-drawer" id="bag-drawer" aria-hidden="true">
+    <div class="drawer-head"><h2>Keranjang <span id="drawer-count">(0)</span></h2><button class="drawer-close close-overlay" aria-label="Tutup">×</button></div>
+    <div class="bag-items" id="bag-items"></div>
+    <div class="bag-bottom"><div class="subtotal"><span>Subtotal</span><strong id="bag-subtotal">Rp 0</strong></div><p>Pembayaran dan pengiriman dikonfirmasi melalui WhatsApp.</p><button class="checkout-button" id="checkout-button">CHECK OUT VIA WHATSAPP</button></div>
+  </aside>
+
+  <dialog class="product-dialog" id="product-dialog"><button class="dialog-close" data-close aria-label="Tutup">×</button><div id="product-dialog-content"></div></dialog>
+  <dialog class="manage-dialog" id="manage-dialog"><button class="dialog-close" data-close aria-label="Tutup">×</button><div class="manage-heading"><h2>Kelola Koleksi</h2><p>Tambah atau ubah produk. Perubahan tersimpan pada browser ini.</p></div><div class="manage-actions"><button class="small-button" id="add-product">Tambah produk +</button><button class="small-button" id="export-catalog">Ekspor JSON</button><label class="small-button import-label">Impor JSON<input id="import-catalog" type="file" accept="application/json,.json" hidden></label><button class="reset-button" id="reset-catalog">Reset katalog</button></div><div class="manage-list" id="manage-list"></div></dialog>
+  <dialog class="edit-dialog" id="edit-dialog"><button class="dialog-close" data-close aria-label="Tutup">×</button><h2 id="edit-title">Tambah produk</h2><form id="product-form" class="product-form"><input type="hidden" id="product-id"><label>Nama produk<input id="field-name" required></label><label>Kategori<input id="field-category" required></label><label>Harga Rp<input id="field-price" type="number" min="0" step="1000" required></label><label>Harga lama (opsional)<input id="field-compare" type="number" min="0" step="1000"></label><label>URL gambar produk<input id="field-image" type="url" required placeholder="https://..."></label><label>Deskripsi<textarea id="field-description" rows="3"></textarea></label><label class="check"><input id="field-featured" type="checkbox"> Produk unggulan</label><div class="form-buttons"><button type="button" class="small-button" data-close>Batal</button><button class="small-button dark">Simpan</button></div></form></dialog>
+
+  <div class="search-panel" id="search-panel"><button class="search-close close-search" aria-label="Tutup">×</button><input id="search-input" type="search" placeholder="Search" autocomplete="off"><div id="search-results" class="search-results"></div></div>
+  <nav class="mobile-menu" id="mobile-menu"><button class="menu-close close-menu" aria-label="Tutup">×</button><a href="index.html">Home</a><a href="index.html">Shop</a><a href="index.html">Collection</a><a href="mailto:hello@kelompok6.com">Contact</a></nav>
+  <div class="toast" id="toast" role="status"></div>
 </body>
 </html>
