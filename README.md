@@ -1,19 +1,19 @@
-# KELOMPOK 6 — Luxury storefront
+# KELOMPOK 6 — luxury storefront for GitHub Pages
 
-PHP 8+ / MySQL e-commerce starter designed for PHP shared hosting such as InfinityFree. GitHub Pages does not execute PHP; this repository's PHP app must be uploaded to a PHP host.
+The live-friendly storefront is `index.html` and works as a static site on GitHub Pages. It includes a responsive product catalog, category filters, search, sorting, product quick view, cart, and WhatsApp checkout handoff.
 
-## Install
-1. Create a MySQL database in your hosting panel. Import `database.sql` using phpMyAdmin. If the host does not allow `CREATE DATABASE` / `USE`, remove those first two SQL lines before importing into the database you selected.
-2. Copy `config.example.php` to `config.php`, then enter the exact database host/name/user/password from the hosting panel. Do not commit `config.php`.
-3. Upload the project files to the hosting account's `htdocs` directory. Ensure PHP can write to `uploads/products`, `uploads/categories`, and `uploads/banners` (the app creates these folders as needed).
-4. Visit `/install.php` once and create an administrator password with at least 12 characters.
-5. Immediately delete `install.php` using the host file manager.
-6. Sign in at `/admin/login.php`, add categories and products, and configure the homepage/store settings.
+## Publish on GitHub Pages
+In the repository, open **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save. Wait for the Pages build and visit the published URL. `index.html` is the static entry point; the PHP files in this repository are not executed by GitHub Pages.
 
-## Features implemented
-Responsive storefront, catalog search/filter/sort/pagination, product pages, session cart with server-side prices, transactional checkout and stock deduction, order confirmation and admin order management, secure password hashing, CSRF checks, product/category/hero uploads (JPG/PNG/WEBP, 5 MB), settings and homepage CMS, dashboard counters, and PDO prepared statements.
+## Add products and change prices
+Open the storefront and choose **MANAGE COLLECTION** below the product grid. Add, edit, or remove products. The catalog editor saves changes in the current browser's local storage, so it is useful for preview and product edits on that device. Click **EXPORT CATALOG JSON** to download the edited catalog. To publish those changes to all visitors, replace the contents of `assets/data/products.json` (or ask a developer to update `STARTER_CATALOG` in `assets/js/storefront.js`) and commit the updated catalog to the repository. The site currently uses starter products defined in that JavaScript file.
 
-No payment gateway or shipping carrier integration is included: orders remain awaiting payment; coordinate payment with the customer outside the site. No customer accounts, variants, extra product gallery, or automated email are included. Admin can change order status. Revenue counts Paid/Processing/Shipped/Completed orders.
+Because GitHub Pages is static, it cannot securely accept an admin login or save edits to a shared database. Local browser edits are not shared across devices and can be cleared by browser storage cleanup. Do not enter private customer information in this site.
 
-## Security and operations
-Use HTTPS. Keep `config.php` private and remove `install.php` after setup. PHP and MySQL versions/features vary across shared hosts. Restrict `uploads` from script execution where `.htaccess` is honored. Back up the database and uploaded files. This project has not been run against the user's InfinityFree account or subjected to a complete deployment test; configure and test on staging first.
+## Checkout
+The bag opens a WhatsApp order draft. Enter the store's WhatsApp number with country code when prompted (for Indonesia, for example `628...`). The customer must send the prepared message to place the order. The site does not process payments, shipping, inventory reservations, or persist orders. Configure a real PHP/MySQL host or commerce platform for secure shared catalog management and actual order processing.
+
+## Design notes
+Editorial serif and clean sans-serif typography, ivory/black/champagne palette, responsive layouts, and remote Unsplash demo product photography are used. Replace sample product names, prices, descriptions, and image URLs with your real catalog. Product image URLs must be publicly reachable over HTTPS.
+
+The PHP/MySQL implementation and SQL schema are retained for deployment on a PHP host, but GitHub Pages only serves the static `index.html` experience.
