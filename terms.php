@@ -1,0 +1,1 @@
+<?php require __DIR__.'/bootstrap.php';site_header($pdo,'Terms & conditions'); ?><section class="page-intro"><span class="eyebrow">INFORMATION</span><h1>Terms & conditions</h1><p>Orders are subject to product availability. Prices and stock are confirmed when your order is placed. Please contact the store to arrange payment and delivery.</p></section><?php site_footer($pdo); ?>

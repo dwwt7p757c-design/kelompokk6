@@ -1,0 +1,1 @@
+<?php require __DIR__.'/bootstrap.php';site_header($pdo,'Privacy policy'); ?><section class="page-intro"><span class="eyebrow">INFORMATION</span><h1>Privacy policy</h1><p>We use the information you provide only to process orders and respond to enquiries. Store data is managed securely and is not sold to third parties.</p></section><?php site_footer($pdo); ?>

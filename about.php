@@ -1,0 +1,1 @@
+<?php require __DIR__.'/bootstrap.php';site_header($pdo,'Our story'); ?><section class="page-intro"><span class="eyebrow">A LITTLE ABOUT US</span><h1>Considered by nature.</h1><p><?=nl2br(e(setting($pdo,'about_text','KELOMPOK 6 is a thoughtful edit of enduring essentials, selected with care for the way you live.'))) ?></p></section><?php site_footer($pdo); ?>

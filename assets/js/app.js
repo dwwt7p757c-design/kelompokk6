@@ -1,0 +1,2 @@
+function previewImage(input,id){const el=document.getElementById(id);if(input.files&&input.files[0]&&el){el.src=URL.createObjectURL(input.files[0]);}}
+document.addEventListener('change',e=>{if(e.target.matches('input[type=file]')&&e.target.files[0]){const f=e.target.files[0];if(f.size>5*1024*1024){alert('Maximum image size is 5 MB.');e.target.value='';}else if(!['image/jpeg','image/png','image/webp'].includes(f.type)){alert('Choose a JPG, PNG, or WEBP image.');e.target.value='';}}});
