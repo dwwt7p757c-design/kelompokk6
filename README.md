@@ -1,19 +1,14 @@
-# KELOMPOK 6 — luxury storefront for GitHub Pages
+# KELOMPOK 6 — storefront untuk iPhone/Safari
 
-The live-friendly storefront is `index.html` and works as a static site on GitHub Pages. It includes a responsive product catalog, category filters, search, sorting, product quick view, cart, and WhatsApp checkout handoff.
+Storefront statis berada di `index.html` dan berjalan di GitHub Pages. Tampilan dibuat mobile-first dengan katalog 2 kolom seperti contoh, produk pakaian, filter kategori, urutan harga, pencarian, detail produk, keranjang, dan tombol checkout WhatsApp.
 
-## Publish on GitHub Pages
-In the repository, open **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save. Wait for the Pages build and visit the published URL. `index.html` is the static entry point; the PHP files in this repository are not executed by GitHub Pages.
+## WhatsApp
+Checkout menggunakan nomor toko **+62 819-5711-0305**. Setelah pelanggan memasukkan produk ke keranjang, pilih BAG → CHECK OUT VIA WHATSAPP. Pesan pesanan otomatis disiapkan lalu WhatsApp dibuka untuk dikirim.
 
-## Add products and change prices
-Open the storefront and choose **MANAGE COLLECTION** below the product grid. Add, edit, or remove products. The catalog editor saves changes in the current browser's local storage, so it is useful for preview and product edits on that device. Click **EXPORT CATALOG JSON** to download the edited catalog. To publish those changes to all visitors, replace the contents of `assets/data/products.json` (or ask a developer to update `STARTER_CATALOG` in `assets/js/storefront.js`) and commit the updated catalog to the repository. The site currently uses starter products defined in that JavaScript file.
+## Menambah produk / mengubah harga
+Tekan **KELOLA PRODUK** di bawah katalog. Tambah, ubah nama/harga/foto, atau hapus produk. Perubahan disimpan di penyimpanan browser Safari/perangkat yang dipakai. Untuk menampilkan perubahan kepada semua pengunjung, ekspor JSON dan minta pemilik repository memperbarui katalog di `assets/js/storefront.js`, lalu commit ke GitHub. Situs statis tidak memiliki admin/database online bersama; edit lokal tidak otomatis terlihat pada perangkat lain.
 
-Because GitHub Pages is static, it cannot securely accept an admin login or save edits to a shared database. Local browser edits are not shared across devices and can be cleared by browser storage cleanup. Do not enter private customer information in this site.
+## GitHub Pages
+Atur **Settings → Pages → Deploy from a branch → main → /(root)**. Tunggu proses publish dan buka `https://dwwt7p757c-design.github.io/kelompokk6/`. File PHP di repository hanya berfungsi pada hosting PHP/MySQL; GitHub Pages menyajikan versi HTML statis.
 
-## Checkout
-The bag opens a WhatsApp order draft. Enter the store's WhatsApp number with country code when prompted (for Indonesia, for example `628...`). The customer must send the prepared message to place the order. The site does not process payments, shipping, inventory reservations, or persist orders. Configure a real PHP/MySQL host or commerce platform for secure shared catalog management and actual order processing.
-
-## Design notes
-Editorial serif and clean sans-serif typography, ivory/black/champagne palette, responsive layouts, and remote Unsplash demo product photography are used. Replace sample product names, prices, descriptions, and image URLs with your real catalog. Product image URLs must be publicly reachable over HTTPS.
-
-The PHP/MySQL implementation and SQL schema are retained for deployment on a PHP host, but GitHub Pages only serves the static `index.html` experience.
+Produk dan gambar saat ini adalah contoh. Ubah informasi, harga, dan tautan gambar melalui pengelola produk. Gambar harus menggunakan URL publik HTTPS. Pembayaran, stok bersama, dan pencatatan order belum tersedia pada versi Pages.
